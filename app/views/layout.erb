@@ -1,19 +1,43 @@
 <!doctype html>
 <html>
   <head>
-    <title>Week 4</title>
+    <title>Car fwiiter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    <nav>
+      <ul>
+          <img src="https://pbs.twimg.com/profile_images/492049081770864640/l-cBrf_6.png" alt="Bird" height="42" width="42">
 
+        <% if logged_in? %>
+
+            <li>Welcome, <%= current_user.username %></li>
+            <li><a href="/tweet">Post a Tweet!</a></li>
+            <li><a href="/logout">Logout</a></li>
+        <% else %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+        <% end %>
+      </ul>
+    </nav>
     <div class="container">
-      <h1>Welcome to Fwitter!</h1>
-      <%= yield %> 
+           <center><h1>Car Fwitter!</h1></center>
+           
+<h2>Sports Cars</h2>
+    <img border="0" alt="sports car " src="http://1.bp.blogspot.com/-KdrYJkzqE80/UsuSTLJurxI/AAAAAAAADxk/J4tcJDUNC7M/s1600/mind+blowing+car+image.jpg" width="250" height="200">
+              
+<h3>Sports Tucks </h3>
+    <img src="http://www.chevrolet.com/content/dam/Chevrolet/northamerica/usa/nscwebsite/en/Home/Vehicles/Trucks%20and%20Vans/2016%20Silverado%20Special%20Edition/01_images/2016-chevrolet-silverado-special-editions-embargoed-635x357-03.jpg" alt="sports truck" height="200" width="250">
+    
+    <h4>Sedan Cars </h4>
+    <img src="https://i.ytimg.com/vi/qR85JnvEIPs/maxresdefault.jpg" alt="Cars" height="200" width="250">
+
+      <%= yield %>
       
-      
-    </div>
+      </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
+
